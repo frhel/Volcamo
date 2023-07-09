@@ -84,6 +84,10 @@ a {
         align-items: center;
         width: 300px;
         padding: 20px;
+        max-height: calc(100% - 77px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-gutter: thin;
 
         h2 {
             font-size: 1.2rem;
@@ -169,6 +173,7 @@ a {
         iframe {
             width: 260px!important;
             height: auto !important;
+            max-height: 100%;
             aspect-ratio: 16/9;
             background: transparent;
             margin-bottom: 20px;
