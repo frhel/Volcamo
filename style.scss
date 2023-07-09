@@ -81,7 +81,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         width: 300px;
         padding: 20px;
         max-height: calc(100% - 77px);
