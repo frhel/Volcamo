@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         const closest_cam = e.target.closest( ".video-wrapper" );
         const index = closest_cam.dataset.index;
+        const id = closest_cam.querySelector( "iframe" ).id;
+        gtag("event", "change_video", {video_change: id, send_to: "G-HY3B905J73"})
         player_settings.current_cam = index;
         focus_video( index );
         start_autoplay();
