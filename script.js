@@ -10,7 +10,7 @@ const player_settings = {
 player_settings.videos = [
     'yJfiMhqLgTY',
     '_q1N4J5oTSE',
-    'OivAGrxLueo',
+    //'OivAGrxLueo',
     'uZGleOgreBY',
     'LMb66idO7DE',
     'dPtOhow3KY0',
