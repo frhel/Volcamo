@@ -10,6 +10,7 @@ const player_settings = {
 player_settings.videos = [
     'yJfiMhqLgTY',
     '_q1N4J5oTSE',
+    'aJP-8kLa3N0',
     //'OivAGrxLueo',
     'uZGleOgreBY',
     'LMb66idO7DE',
@@ -81,6 +82,7 @@ function start_autoplay() {
 }
 
 function next_focus() {
+    console.log( "next_focus")
     player_settings.current_cam++;
     if( player_settings.current_cam >= player_settings.cams.length ) {
         player_settings.current_cam = 0;
