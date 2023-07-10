@@ -8,13 +8,13 @@ const player_settings = {
 };
 
 player_settings.videos = [
+    'OivAGrxLueo',
     'yJfiMhqLgTY',
     '_q1N4J5oTSE',
     'uZGleOgreBY',
     'LMb66idO7DE',
     'dPtOhow3KY0',
     '3uE8TEdK4C4',
-    'OivAGrxLueo'
 ]
 
 const main_player = document.getElementById('main-player');
