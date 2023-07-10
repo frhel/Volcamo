@@ -14,6 +14,7 @@ player_settings.videos = [
     'LMb66idO7DE',
     'dPtOhow3KY0',
     '3uE8TEdK4C4',
+    'OivAGrxLueo'
 ]
 
 const main_player = document.getElementById('main-player');
