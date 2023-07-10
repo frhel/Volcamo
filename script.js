@@ -23,11 +23,19 @@ const preview_cams = document.getElementById('preview-cams');
 const auto_play_toggle = document.getElementById('automatic-toggle');
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Load the IFrame Player API code asynchronously.
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentElement.insertBefore(tag, firstScriptTag);
+    // End of IFrame Player API code
 
+    bind_events();
+    
+} );
+
+function bind_events() {
+    // Bind the autoplay toggle
     auto_play_toggle.addEventListener( "click", function(e) {
         e.preventDefault();
         if (auto_play_toggle.classList.contains( "on" )) {
@@ -39,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     } );
 
+    // Bind the preview div click event
     preview_cams.addEventListener( "click", function(e) {
+        // If the click was on the checkbox, handle it and return
         if (e.target.tagName === 'INPUT') {
             const index = e.target.closest( ".video-wrapper" ).dataset.index;
             if (e.target.checked) {       
@@ -50,15 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return;
         }
+
+        // Else, handle the click on the div itself and swap the video
         const closest_cam = e.target.closest( ".video-wrapper" );
         const index = closest_cam.dataset.index;
         const id = closest_cam.querySelector( "iframe" ).id;
+        // Track the event in GA4
         gtag("event", "change_video", {video_change: id, send_to: "G-HY3B905J73"})
         player_settings.current_cam = index;
         focus_video( index );
         start_autoplay();
     } );
-} );
+}
 
 function start_autoplay() {
     if (auto_play_toggle.classList.contains( "on" )) {
