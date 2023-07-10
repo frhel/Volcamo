@@ -8,9 +8,9 @@ const player_settings = {
 };
 
 player_settings.videos = [
-    'OivAGrxLueo',
     'yJfiMhqLgTY',
     '_q1N4J5oTSE',
+    'OivAGrxLueo',
     'uZGleOgreBY',
     'LMb66idO7DE',
     'dPtOhow3KY0',
